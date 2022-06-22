@@ -1,0 +1,19 @@
+INSERT INTO PETS(BREED)
+VALUES ('yard');
+INSERT INTO PETS(BREED)
+VALUES ('fighting');
+INSERT INTO PETS(BREED)
+VALUES ('working');
+INSERT INTO PETS(BREED)
+VALUES ('maxi');
+INSERT INTO PETS(BREED)
+VALUES ('middle');
+
+INSERT INTO CUSTOMERS(NAME, EMAIL, ANIMAL, PET_ID)
+VALUES ('Lelek', 'lelek@yandex.ru', 'rat', 1);
+INSERT INTO CUSTOMERS(NAME, EMAIL, ANIMAL, PET_ID)
+VALUES ('Bolek', 'bolek@yandex.ru', 'elephant', 2);
+INSERT INTO CUSTOMERS(NAME, EMAIL, ANIMAL, PET_ID)
+VALUES ('Bim', 'bim@yandex.ru', 'crocodile', 4);
+INSERT INTO CUSTOMERS(NAME, EMAIL, ANIMAL, PET_ID)
+VALUES ('Bom', 'bom@yandex.ru', 'goat', 3);
