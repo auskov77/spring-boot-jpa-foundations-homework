@@ -1,0 +1,20 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+Customers:
+<body>
+<table>
+    <tr th:each="customer: ${customers}">
+        <td th:text="${customer.name}">
+            The Best Customer
+        </td>
+        <td th:text="${customer.email}">
+            The Best Email
+        </td>
+        <td th:text="${customer.animal}">
+            The Best Animal
+        </td>
+    </tr>
+</table>
+</body>
+
+</html>

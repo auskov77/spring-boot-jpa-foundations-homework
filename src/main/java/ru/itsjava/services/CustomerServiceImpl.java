@@ -20,4 +20,10 @@ public class CustomerServiceImpl implements CustomerService{
         List<Customer> customers = customerRepository.findAll();
         System.out.println(customers.toString());
     }
+
+    @Transactional
+    @Override
+    public List<Customer> getAllCustomers() {
+        return customerRepository.findAll();
+    }
 }
