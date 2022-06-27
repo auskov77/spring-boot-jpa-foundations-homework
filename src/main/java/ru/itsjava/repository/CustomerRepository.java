@@ -7,5 +7,6 @@ import ru.itsjava.domain.Pet;
 import java.util.Optional;
 
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
+    void deleteAllByPet(Pet pet);
     Optional<Customer> findCustomerByNameAndPet(String name, Pet pet);
 }

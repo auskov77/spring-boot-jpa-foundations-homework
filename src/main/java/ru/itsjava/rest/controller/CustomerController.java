@@ -16,7 +16,7 @@ import java.util.List;
 public class CustomerController {
     private final CustomerService customerService;
 
-    @GetMapping("/customers")
+    @GetMapping("/customer")
     public String customersPage(Model model) {
         List<Customer> allCustomers = customerService.getAllCustomers();
         List<CustomerDto> customerDtos = new ArrayList<>();
