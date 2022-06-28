@@ -21,9 +21,33 @@ public class CustomerServiceImpl implements CustomerService{
         System.out.println(customers.toString());
     }
 
-    @Transactional
+    @Transactional(readOnly = true)
     @Override
     public List<Customer> getAllCustomers() {
         return customerRepository.findAll();
+    }
+
+    @Transactional(readOnly = true)
+    @Override
+    public Customer getCustomerById(long id) {
+        return customerRepository.findById(id);
+    }
+
+    @Transactional
+    @Override
+    public void createCustomer(Customer customer) {
+        customerRepository.save(customer);
+    }
+
+    @Transactional
+    @Override
+    public void updateCustomer(Customer customer) {
+        customerRepository.save(customer);
+    }
+
+    @Transactional
+    @Override
+    public void deleteCustomer(Customer customer) {
+        customerRepository.delete(customer);
     }
 }
