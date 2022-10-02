@@ -30,7 +30,7 @@ public class CustomerServiceImpl implements CustomerService{
     @Transactional(readOnly = true)
     @Override
     public Customer getCustomerById(long id) {
-        return customerRepository.findById(id);
+        return customerRepository.findById(id).get();
     }
 
     @Transactional
