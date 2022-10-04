@@ -1,14 +1,10 @@
 package ru.itsjava.repository;
 
+import org.springframework.data.jpa.repository.JpaRepository;
 import ru.itsjava.domain.Pet;
 
-public interface PetRepository {
+import java.util.Optional;
 
-    Pet findById(long id);
-
-    void insert(Pet pet);
-
-    void update(Pet pet);
-
-    void deleteById(long id);
+public interface PetRepository extends JpaRepository<Pet, Long> {
+    Optional<Pet> getByBreed(String breed);
 }
