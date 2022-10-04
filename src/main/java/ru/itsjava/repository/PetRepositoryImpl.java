@@ -8,8 +8,6 @@ import ru.itsjava.domain.Pet;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
-import java.util.List;
-import java.util.Optional;
 
 @Repository
 @RequiredArgsConstructor
@@ -18,11 +16,6 @@ public class PetRepositoryImpl implements PetRepository {
 
     @PersistenceContext
     private final EntityManager entityManager;
-
-    @Override
-    public Optional<Pet> getByBreed(String breed) {
-        return null;
-    }
 
     @Override
     public Pet findById(long id) {
@@ -47,20 +40,5 @@ public class PetRepositoryImpl implements PetRepository {
     public void deleteById(long id) {
         Pet petById = entityManager.find(Pet.class, id);
         entityManager.remove(petById);
-    }
-
-    @Override
-    public void save(Pet pet) {
-
-    }
-
-    @Override
-    public void delete(Pet pet) {
-
-    }
-
-    @Override
-    public List<Pet> findAll() {
-        return null;
     }
 }

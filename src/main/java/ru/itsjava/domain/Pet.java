@@ -19,9 +19,4 @@ public class Pet {
     private long id;
 
     private String breed;
-
-    public Pet get() {
-        return null;
-    }
 }
-
